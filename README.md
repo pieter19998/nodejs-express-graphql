@@ -23,9 +23,11 @@ $ are query variables that can be set in the query variable tab.
 ```graphql
 query getAlbum($albumId: Int!) {
   album(id: $albumId) {
-    artist
-    title
-    genre
+  	id
+  	title
+  	artist
+  	releaseYear
+        genre
   }
 }
 ```
@@ -34,7 +36,11 @@ query getAlbum($albumId: Int!) {
 ```graphql
 query getAlbums($genre: String!) {
   albums(genre: $genre) {
-    artist
+  	id
+  	title
+  	artist
+  	releaseYear
+        genre
   }
 }
 
@@ -47,7 +53,7 @@ mutation createAlbum($id: Int!, $title: String!, $artist: String!, $releaseYear:
   	title
   	artist
   	releaseYear
-    genre
+        genre
   }
 }
 
@@ -67,7 +73,7 @@ mutation updateAlbumTitle($id: Int!, $title: String!) {
 ```graphql
 mutation deleteAlbum($id: Int!){
   deleteAlbum(id: $id){
-  id
+    id
   }
 }
 
