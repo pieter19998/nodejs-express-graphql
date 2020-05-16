@@ -57,7 +57,7 @@ const getAlbum = async (args) => {
 }
 
 const getAlbums = async (args) => {
-    if (args.genre) return data.filter(albums => albums.genre === args.genre)
+    if (args.genre) return data.filter(albums => albums.genre === args.genre);
 }
 
 const updateAlbumTitle = async ({id, title}) => {
@@ -73,13 +73,11 @@ const updateAlbumTitle = async ({id, title}) => {
 }
 
 const createAlbum = async ({id, title, artist, releaseYear, genre}) => {
-    data.push({id: id,title: title, artist: artist, releaseYear: releaseYear, genre:  genre})
-    return 0;
+    data.push({id: id,title: title, artist: artist, releaseYear: releaseYear, genre:  genre});
 }
 
 const deleteAlbum = async (args) => {
-    data = data.filter(album => album.id !== args.id)
-    return 0;
+    data = data.filter(album => album.id !== args.id);
 }
 
 //resolvers
