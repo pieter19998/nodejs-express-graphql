@@ -23,37 +23,38 @@ $ are query variables that can be set in the query variable tab.
 ```graphql
 query getAlbum($albumId: Int!) {
   album(id: $albumId) {
-  	id
-  	title
-  	artist
-  	releaseYear
-        genre
+    id
+    title
+    artist
+    releaseYear
+    genre
   }
 }
+
 ```
 
 ###### get multiple albums by genre
 ```graphql
 query getAlbums($genre: String!) {
   albums(genre: $genre) {
-  	id
-  	title
-  	artist
-  	releaseYear
-        genre
+    id
+    title
+    artist
+    releaseYear
+    genre
   }
 }
 
 ```
 ###### new album
 ```graphql
-mutation createAlbum($id: Int!, $title: String!, $artist: String!, $releaseYear: Int!, $genre: String!){
-  createAlbum(id: $id, title: $title ,artist: $artist, releaseYear: $releaseYear, genre: $genre ){
-  	id
-  	title
-  	artist
-  	releaseYear
-        genre
+mutation createAlbum($id: Int!, $title: String!, $artist: String!, $releaseYear: Int!, $genre: String!) {
+  createAlbum(id: $id, title: $title, artist: $artist, releaseYear: $releaseYear, genre: $genre) {
+    id
+    title
+    artist
+    releaseYear
+    genre
   }
 }
 
